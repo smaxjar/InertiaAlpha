@@ -1,0 +1,14 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class Checkpoints : MonoBehaviour {
+
+	public Transform SpawnPoint;
+
+	void OnTriggerEnter(Collider point){
+
+		if (point.tag == "Player") {
+			SpawnPoint.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+		}
+	}
+}

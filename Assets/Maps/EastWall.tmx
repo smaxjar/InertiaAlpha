@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="left-down" width="8" height="8" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" source="../../../FirstPlayableMaps/Placeholder floor.tsx"/>
+ <tileset firstgid="10" source="../../../FirstPlayableMaps/Placeholder2.tsx"/>
+ <layer name="Tile Layer 1" width="8" height="8">
+  <data encoding="csv">
+1,2,2,2,2,2,15,3,
+4,5,5,5,5,5,15,6,
+4,5,5,15,15,15,15,6,
+4,5,5,15,15,5,5,6,
+4,5,15,15,15,5,5,6,
+4,5,15,5,5,5,5,6,
+4,5,15,5,5,5,5,6,
+7,8,15,8,8,8,8,9
+</data>
+ </layer>
+</map>

@@ -1,0 +1,12 @@
+using UnityEngine;
+using System.Collections;
+
+public class Spikes : MonoBehaviour {
+
+
+	void OnTriggerExit(Collider coll){
+
+		if (coll.gameObject.tag == "Player")    // takes 25 points from players health.
+			MainGameManager.Instance.adjustHealth (-25);
+	}
+}.

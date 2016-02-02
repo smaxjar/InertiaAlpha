@@ -1,0 +1,37 @@
+using UnityEngine;
+using System.Collections;
+
+public class PressurePlate : MonoBehaviour {
+
+	//Pressure plate variables
+	public bool pressurePlate = false;
+
+	// Use this for initialization
+	void Start () {
+
+	}
+
+	// Update is called once per frame
+	void Update () {
+	}
+
+	void OnCollisionEnter(Collision other){
+		if (other.transform.tag == "Player") {
+			pressurePlate = true;
+			// add door opening animation/logic
+		}
+		if (other.transform.tag == "movablebox"){ // the tag for movable box will change to whatever we decide to name them
+		pressurePlate = true;			  // crate, box, etc.
+		// door opening animation/logic 
+		} 
+		print("Detected collision between " + gameObject.name + " and " + other.collider.name); // these 3 lines test if its colliding
+		print("There are " + other.contacts.Length + " point(s) of contacts");
+		print("Their relative velocity is " + other.relativeVelocity);
+	}
+
+	void OnCollisionExit(Collision other){
+		pressurePlate = false;
+		// add door closing animation/logic
+		print(gameObject.name + " and " + other.collider.name + " are no longer colliding"); //this line just tests if its colliding
+	}
+} // This is still a work in progress. more will be added once moving and movable boxes are done
